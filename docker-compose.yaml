@@ -8,13 +8,6 @@ services:
       - 8080:8080
     volumes:
       - .:/app
-    environment:
-      - spring.datasource.url=jdbc:mysql://db:3306/spring-app
-      - spring.datasource.username=root
-      - spring.datasource.password=root
-      - spring.jpa.show.sql=true
-      - spring.jpa.hibernate.ddl-auto=create
-      - spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
     depends_on:
       db:
         condition: service_healthy
